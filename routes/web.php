@@ -62,6 +62,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/edit-product/{id}', [CandidatesController::class, 'editProduct'])->name('edit.product');
     Route::post('/update-product', [CandidatesController::class, 'updateProduct'])->name('update.product');
     Route::post('/delete-product', [CandidatesController::class, 'deleteProduct'])->name('delete.product');
+    
+
+    Route::get('/add-candidate-education', [CandidatesController::class, 'addCandidateEducation'])->name('add.candidate.education');
 
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

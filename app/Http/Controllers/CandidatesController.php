@@ -94,7 +94,7 @@ class CandidatesController extends Controller
     }
     
     
-    public function deleteeducation(Request $request)
+    public function deleteCandidateEducation(Request $request)
     {
         $education = Candidates::find($request->education_id);
         $education->delete();

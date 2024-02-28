@@ -65,11 +65,12 @@ Route::middleware('auth')->group(function () {
     
 
     Route::get('/add-candidate-education', [CandidatesController::class, 'addCandidateEducation'])->name('add.candidate.education');
-    Route::get('/new-candidate-education', [CandidatesController::class, 'saveCandidateEducation'])->name('new.candidate.education');
+    Route::post('/new-candidate-education', [CandidatesController::class, 'saveCandidateEducation'])->name('new.candidate.education');
     Route::get('/candidate-education-status/{id}', [CandidatesController::class, 'educationStatus'])->name('candidate.education.status');
     Route::get('/manage-candidate-education', [CandidatesController::class, 'manageCandidateEducation'])->name('manage.candidate.education');
     Route::get('/edit-candidate-education', [CandidatesController::class, 'editCandidateEducation'])->name('edit.candidate.education');
     Route::post('/update-candidate-education', [CandidatesController::class, 'updateCandidateEducation'])->name('update.candidate.education');
+    Route::post('/delete-candidate-education', [CandidatesController::class, 'deleteCandidateEducation'])->name('delete.candidate.education');
 
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

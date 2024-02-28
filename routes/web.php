@@ -55,12 +55,13 @@ Route::middleware('auth')->group(function () {
     Route::post('/update-company-circular', [CompanyCircularController::class, 'updateCompanyCircular'])->name('update.company.circular');
     Route::post('/delete-company-circular', [CompanyCircularController::class, 'deleteCompanyCircular'])->name('delete.company.circular');
 
+    Route::get('/add-personal-info', [CandidatesController::class, 'addPersonalInfo'])->name('add.personal.info');
     Route::post('/new-personal-info', [CandidatesController::class, 'savePersonalInfo'])->name('new.personal.info');
     Route::get('/personal-info-status/{id}',[CandidatesController::class, 'personalInfoStatus'])->name('personal.info.status');
     Route::get('/manage-personal-info', [CandidatesController::class, 'managePersonalInfo'])->name('manage.personal.info');
     Route::get('/edit-personal-info/{id}', [CandidatesController::class, 'editPersonalInfo'])->name('edit.personal.info');
     Route::post('/update-personal-info', [CandidatesController::class, 'updatePersonalInfo'])->name('update.personal.info');
-    Route::post('/delete-personal-info', [CandidatesController::class, 'deletePersonalInfo'])->name('delete.personal.info');
+    Route::post('/delete-personal-info', [CandidatesController::class, 'deletePersonalInfo'])->name('delete.personal.info'); 
     
       
     Route::get('/add-candidate-education', [CandidatesController::class, 'addCandidateEducation'])->name('add.candidate.education');

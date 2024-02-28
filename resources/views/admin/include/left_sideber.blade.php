@@ -16,7 +16,7 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{ route('add.company')}}">Add Company</a></li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('manage.company')}}">Manage Company</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('add.company.circular')}}">Manage Circular</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('manage.company.circular')}}">Manage Circular</a></li>
                 </ul>
             </div>
         </li>
@@ -34,15 +34,15 @@
             </div>
           </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#category" aria-expanded="false" aria-controls="category">
+            <a class="nav-link" data-toggle="collapse" href="#personal-info" aria-expanded="false" aria-controls="personal-info">
             <i class="icon-columns menu-icon"></i>
-              <span class="menu-title">Category</span>
+              <span class="menu-title">Candidates</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="category">
+            <div class="collapse" id="personal-info">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href=""> Add Category </a></li>
-                <li class="nav-item"> <a class="nav-link" href=""> Manage Category </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('add.personal.info')}}"> Add Personal Info </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('manage.personal.info')}}"> Manage Personal Info </a></li>
               </ul>
             </div>
           </li>

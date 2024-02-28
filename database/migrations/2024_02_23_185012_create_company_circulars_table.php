@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('job_location');
             $table->string('salary');
             $table->string('experience');
-            $table->dateTime('published_date');
-            $table->dateTime('application_deadline');
+            $table->string('published_date');
+            $table->string('application_deadline');
             $table->text('education_requirments');
             $table->text('responsibilities_context');
             $table->text('compensation_other_benefits');

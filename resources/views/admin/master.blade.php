@@ -12,10 +12,12 @@
     <link rel="stylesheet" href="{{asset('adminAsset')}}/assets/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
+    
     <link rel="stylesheet" href="{{asset('adminAsset')}}/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
     <link rel="stylesheet" href="{{asset('adminAsset')}}/assets/vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" type="text/css" href="{{asset('adminAsset')}}/assets/js/select.dataTables.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
     <!-- End plugin css for this page -->
     <!-- inject:css -->
@@ -68,6 +70,7 @@
 
     <!-- End plugin js for this page -->
     <!-- inject:js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('adminAsset')}}/assets/js/off-canvas.js"></script>
     <script src="{{asset('adminAsset')}}/assets/js/hoverable-collapse.js"></script>
     <script src="{{asset('adminAsset')}}/assets/js/template.js"></script>

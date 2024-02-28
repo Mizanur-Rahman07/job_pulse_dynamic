@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('personal_information', function (Blueprint $table) {
             $table->id();
-            $table->integer('candidate_id');
             $table->string('candidate_first_name');
             $table->string('candidate_last_name');
             $table->text('image');
@@ -23,7 +22,7 @@ return new class extends Migration
             $table->string('gender');
             $table->string('religion');
             $table->string('marital_status');
-            $table->integer('national_id');
+            $table->string('national_id');
             $table->string('height');
             $table->string('weight');
             $table->string('blood_group');

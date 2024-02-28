@@ -94,7 +94,7 @@ class CompanyCircularController extends Controller
         $circular->employment_status = $request->employment_status;
         $circular->slug = $this->makeSlug($request);
         $circular->save();
-        return redirect('/manage-company')->with('message', 'Company Circular Update Successfully');
+        return redirect('/manage-company-circular')->with('message', 'Company Circular Update Successfully');
     }
     
     

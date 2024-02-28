@@ -55,14 +55,21 @@ Route::middleware('auth')->group(function () {
     Route::post('/update-company-circular', [CompanyCircularController::class, 'updateCompanyCircular'])->name('update.company.circular');
     Route::post('/delete-company-circular', [CompanyCircularController::class, 'deleteCompanyCircular'])->name('delete.company.circular');
 
-    Route::get('/add-personal-info', [CandidatesController::class, 'addPersonalInfo'])->name('add.personal.info');
-    Route::post('/new-product', [CandidatesController::class, 'saveProduct'])->name('new.product');
-    Route::get('/product-status/{id}',[CandidatesController::class, 'productStatus'])->name('product.status');
-    Route::get('/manage-product', [CandidatesController::class, 'manageProduct'])->name('manage.product');
-    Route::get('/edit-product/{id}', [CandidatesController::class, 'editProduct'])->name('edit.product');
-    Route::post('/update-product', [CandidatesController::class, 'updateProduct'])->name('update.product');
-    Route::post('/delete-product', [CandidatesController::class, 'deleteProduct'])->name('delete.product');
+    Route::post('/new-personal-info', [CandidatesController::class, 'savePersonalInfo'])->name('new.personal.info');
+    Route::get('/personal-info-status/{id}',[CandidatesController::class, 'personalInfoStatus'])->name('personal.info.status');
+    Route::get('/manage-personal-info', [CandidatesController::class, 'managePersonalInfo'])->name('manage.personal.info');
+    Route::get('/edit-personal-info/{id}', [CandidatesController::class, 'editPersonalInfo'])->name('edit.personal.info');
+    Route::post('/update-personal-info', [CandidatesController::class, 'updatePersonalInfo'])->name('update.personal.info');
+    Route::post('/delete-personal-info', [CandidatesController::class, 'deletePersonalInfo'])->name('delete.personal.info');
     
+      
+    Route::get('/add-candidate-education', [CandidatesController::class, 'addCandidateEducation'])->name('add.candidate.education');
+    Route::post('/new-candidate-education', [CandidatesController::class, 'saveCandidateEducation'])->name('new.candidate.education');
+    Route::get('/candidate-education-status/{id}', [CandidatesController::class, 'educationStatus'])->name('candidate.education.status');
+    Route::get('/manage-candidate-education', [CandidatesController::class, 'manageCandidateEducation'])->name('manage.candidate.education');
+    Route::get('/edit-candidate-education', [CandidatesController::class, 'editCandidateEducation'])->name('edit.candidate.education');
+    Route::post('/update-candidate-education', [CandidatesController::class, 'updateCandidateEducation'])->name('update.candidate.education');
+    Route::post('/delete-candidate-education', [CandidatesController::class, 'deleteCandidateEducation'])->name('delete.candidate.education');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

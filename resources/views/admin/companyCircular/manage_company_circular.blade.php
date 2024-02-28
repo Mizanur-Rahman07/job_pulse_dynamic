@@ -35,94 +35,116 @@ Company Circular List
                                         <div class="card">
                                             <div class="card-body">
                                                 <p class="card-description">
-
                                                 </p>
                                                 <form action="{{ route ('new.company.circular')}}" method="POST"
                                                     enctype="multipart/form-data" class="forms-sample">
                                                     @csrf
                                                     <div class="row">
                                                         <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <label for="exampleInputUsername1">circular Title</label>
-                                                                <input type="text" class="form-control"
-                                                                    name="circular_title" id="exampleInputUsername1"
-                                                                    placeholder="Enter circular Name">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="exampleInputEmail1">circular Type </label>
-                                                                <select name="circular_type" class="form-control"
-                                                                    id="exampleFormControlSelect1">
-                                                                    <option selected>Choose...</option>
-                                                                    <option value="1">circular</option>
-                                                                    <option value="2">Hot Discount circular</option>
-                                                                    <option value="3">Fasion</option>
-                                                                    <option value="3">Kids Zone</option>
-                                                                    <option value="3">Book </option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="form-group">
-                                                                        <label for="exampleInputUsername1">Image</label>
-                                                                        <input type="file" class="form-control"
-                                                                            name="circular_image"
-                                                                            id="exampleInputUsername1"
-                                                                            placeholder="Enter circular Price">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="form-group">
-                                                                        <label for="exampleInputEmail1">Quantity
-                                                                        </label>
-                                                                        <input type="number" class="form-control"
-                                                                            name="quantity" id="exampleInputEmail1"
-                                                                            placeholder="Enter Quantity">
-                                                                    </div>
+
+                                                            <div class="form-group ">
+                                                                <label for="exampleInputEmail1">Company </label>
+                                                                <div class="d-flex justify-content-between">
+                                                                    <select name="company_id" class="form-control"
+                                                                        id="exampleFormControlSelect1">
+                                                                        <option selected>Select Company</option>
+                                                                        @foreach($circulars as $company)
+                                                                        <option value="{{$company->id}}">
+                                                                            {{$company->company_name}}
+                                                                        </option>
+                                                                        @endforeach
+                                                                    </select>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="exampleInputEmail1">circular Price </label>
-                                                                <input type="number" class="form-control"
-                                                                    name="circular_price" id="exampleInputEmail1"
-                                                                    placeholder="Enter Quantity">
+                                                                <label for="exampleInputUsername1">Vacancy</label>
+                                                                <input type="number" class="form-control" name="vacancy"
+                                                                    id="exampleInputUsername1"
+                                                                    placeholder="Enter Vacency">
                                                             </div>
-                                                            <div class="form-check form-check-flat form-check-primary">
-                                                                <label class="form-check-label">
-                                                                    <input name="strock" type="checkbox"
-                                                                        class="form-check-input">
-                                                                    Strock
-                                                                </label>
+                                                            <div class="form-group">
+                                                                <label for="exampleInputUsername1">Location</label>
+                                                                <input type="textarea" class="form-control"
+                                                                    name="job_location" id="exampleInputUsername1"
+                                                                    placeholder="Enter job location">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleInputUsername1">Salary</label>
+                                                                <input type="text" class="form-control" name="salary"
+                                                                    id="exampleInputUsername1"
+                                                                    placeholder="Enter Salary">
+                                                            </div>
+                                                            
+                                                            <div class="form-group">
+                                                                <label for="exampleInputUsername1">Experience</label>
+                                                                <input type="text-area" class="form-control"
+                                                                    name="experience" id="exampleInputUsername1"
+                                                                    placeholder="Enter experience">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleInputUsername1">Education
+                                                                    Requirments</label>
+                                                                <input type="textarea" class="form-control"
+                                                                    name="education_requirments"
+                                                                    id="exampleInputUsername1"
+                                                                    placeholder="Enter Education Requirments">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <label for="exampleInputUsername1">circular Sub
-                                                                    Title</label>
-                                                                <input type="text" class="form-control"
-                                                                    name="circular_sub_title" id="exampleInputUsername1"
-                                                                    placeholder="Enter circular Price">
+                                                                <label for="exampleInputUsername1">Published
+                                                                    Date</label>
+                                                                <input type="date" class="form-control"
+                                                                    name="published_date" id="exampleInputUsername1"
+                                                                    placeholder="Enter published date">
                                                             </div>
-                                                            
                                                             <div class="form-group">
-                                                                <label for="exampleInputUsername1">circular URL</label>
-                                                                <input type="text" class="form-control" name="slug"
+                                                                <label for="exampleInputUsername1">Application
+                                                                    Deadline</label>
+                                                                <input type="date" class="form-control"
+                                                                    name="application_deadline"
                                                                     id="exampleInputUsername1"
-                                                                    placeholder="Enter circular Name">
+                                                                    placeholder="Enter Email Address">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="exampleInputUsername1">Responsibilities
+                                                                    Context</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="responsibilities_context"
+                                                                    id="exampleInputUsername1"
+                                                                    placeholder="Enter responsibilities context">
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="exampleInputEmail1">Discount Price </label>
-                                                                <input type="number" class="form-control"
-                                                                    name="circular_discount_price"
-                                                                    id="exampleInputEmail1"
-                                                                    placeholder="Enter Quantity">
+                                                                <label for="exampleInputUsername1">Compensation
+                                                                    Benefits</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="compensation_other_benefits"
+                                                                    id="exampleInputUsername1"
+                                                                    placeholder="Enter compensation other benefits">
                                                             </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleInputUsername1">Workplace</label>
+                                                                <input type="text" class="form-control" name="workplace"
+                                                                    id="exampleInputUsername1"
+                                                                    placeholder="Enter workplace">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleInputUsername1">Employment
+                                                                    Status</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="employment_status" id="exampleInputUsername1"
+                                                                    placeholder="Enter employment status">
+                                                            </div>
+
+
                                                         </div>
-                                                    </div>
-                                                    <div class="text-right">
-                                                        <button class="btn btn-light">Cancel</button>
-                                                        <button type="submit"
-                                                            class="btn btn-primary mr-2">Submit</button>
+                                                        <div class="text-left">
+                                                            <button class="btn btn-light">Cancel</button>
+                                                            <button type="submit"
+                                                                class="btn btn-primary mr-2">Submit</button>
+                                                        </div>
                                                     </div>
                                                 </form>
                                             </div>
@@ -181,8 +203,9 @@ Company Circular List
                                         class="fa-solid fa-person-arrow-down-to-line"></i></a>
                                 @endif
 
-                                <a href=" {{route ('edit.company.circular',['id'=>$circular->id])}}" class="btn btn-success mr-1 "
-                                    data-bs-toggle="tooltip" title="Edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href=" {{route ('edit.company.circular',['id'=>$circular->id])}}"
+                                    class="btn btn-success mr-1 " data-bs-toggle="tooltip" title="Edit"><i
+                                        class="fa-solid fa-pen-to-square"></i></a>
                                 <form action="{{ route('delete.company.circular')}}" method="POST" id="delete">
                                     @csrf
                                     <input type="hidden" name="circular_id" value="{{$circular->id}}">

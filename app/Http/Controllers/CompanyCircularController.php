@@ -19,7 +19,7 @@ class CompanyCircularController extends Controller
     {
         // return $request;
         $circular = new CompanyCircular();
-        $circular->company_id = $request->company_id;
+        $circular->company_id = $request->company_id; 
         $circular->vacancy = $request->vacancy;
         $circular->job_location = $request->job_location;
         $circular->salary = $request->salary;
